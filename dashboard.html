@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="id" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Amikom Esports</title>
+    <meta name="description" content="Dashboard kece buat pantau performa tim, saldo turnamen, dan transfer koin di Amikom Esports.">
+
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="dashboard-container">
+
+    <aside class="sidebar">
+        <div class="sidebar-header">
+            <a href="index.html" class="logo">
+                <img src="logo.png" alt="Amikom Esports Logo" style="height: 32px; width: auto; margin-right: 8px;">
+                <span style="font-size: 1.2rem;">Amikom<span class="text-gradient">Esports</span></span>
+            </a>
+        </div>
+
+        <nav class="sidebar-menu">
+            <a href="dashboard.html" class="sidebar-link active">
+                <i class="ri-dashboard-3-line"></i>
+                <span>Home Dashboard</span>
+            </a>
+            <a href="index.html" class="sidebar-link">
+                <i class="ri-home-4-line"></i>
+                <span>Halaman Utama</span>
+            </a>
+            <a href="about.html" class="sidebar-link">
+                <i class="ri-group-line"></i>
+                <span>Tim Developer</span>
+            </a>
+            <a href="contact.html" class="sidebar-link">
+                <i class="ri-mail-send-line"></i>
+                <span>Kontak Admin</span>
+            </a>
+
+            <div style="margin-top: auto; display: flex; flex-direction: column; gap: 8px;">
+                <a href="signin.html" class="sidebar-link">
+                    <i class="ri-logout-box-r-line"></i>
+                    <span>Log Out</span>
+                </a>
+            </div>
+        </nav>
+
+        <div class="sidebar-footer">
+
+            <button id="theme-toggle" class="theme-toggle-btn" style="width: 100%; border-radius: var(--radius-md); gap: 8px;" title="Ubah Tema">
+                <i class="ri-sun-line"></i>
+                <span>Ganti Tema</span>
+            </button>
+        </div>
+    </aside>
+
+    <main class="dashboard-main">
+
+        <header class="dash-header">
+            <div style="display: flex; align-items: center; gap: 16px;">
+
+                <i id="menu-btn-dash" class="ri-menu-2-line menu-btn-dash"></i>
+                <div>
+                    <h1 style="font-size: 1.8rem; font-weight: 700;">Workspace Tim Kamu</h1>
+                    <p style="color: var(--text-secondary); font-size: 0.95rem;">Welcome back, MVP!</p>
+                </div>
+            </div>
+
+            <div class="dash-user-panel">
+                <div class="dash-user-info" style="text-align: right; display: block;">
+                    <h3>Pro Player #1</h3>
+                    <p>Akun VIP</p>
+                </div>
+                <img src="https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&w=100&q=80" alt="Avatar" class="dash-avatar">
+            </div>
+        </header>
+
+        <section class="metrics-grid animate-fade-in-up">
+
+            <div class="glass-card metric-card hover-scale">
+                <div class="metric-data">
+                    <h4>Koin Turnamen</h4>
+                    <div class="value">$12.480,50</div>
+                    <div class="trend up">
+                        <i class="ri-arrow-up-line"></i>
+                        <span>+14.5% dari bulan lalu</span>
+                    </div>
+                </div>
+                <div class="metric-icon">
+                    <i class="ri-wallet-3-line"></i>
+                </div>
+            </div>
+
+            <div class="glass-card metric-card hover-scale">
+                <div class="metric-data">
+                    <h4>Match Menang</h4>
+                    <div class="value">42 Match</div>
+                    <div class="trend up">
+                        <i class="ri-arrow-up-line"></i>
+                        <span>+8.2% vs kemarin</span>
+                    </div>
+                </div>
+                <div class="metric-icon">
+                    <i class="ri-trophy-line"></i>
+                </div>
+            </div>
+
+            <div class="glass-card metric-card hover-scale">
+                <div class="metric-data">
+                    <h4>Server Aktif</h4>
+                    <div class="value">24 Server</div>
+                    <div class="trend" style="color: var(--text-muted);">
+                        <i class="ri-checkbox-blank-circle-line"></i>
+                        <span>Gak ada kendala</span>
+                    </div>
+                </div>
+                <div class="metric-icon">
+                    <i class="ri-server-line"></i>
+                </div>
+            </div>
+
+            <div class="glass-card metric-card hover-scale">
+                <div class="metric-data">
+                    <h4>Tagihan Pendaftaran</h4>
+                    <div class="value">$280,00</div>
+                    <div class="trend down">
+                        <i class="ri-arrow-down-line"></i>
+                        <span>-2.4% udah dibayar</span>
+                    </div>
+                </div>
+                <div class="metric-icon">
+                    <i class="ri-refund-line"></i>
+                </div>
+            </div>
+
+        </section>
+
+        <div class="dashboard-grid animate-fade-in-up">
+
+            <div style="display: flex; flex-direction: column; gap: 32px;">
+
+                <div class="glass-card chart-card">
+                    <div class="chart-header">
+                        <div>
+                            <h3 style="font-size: 1.25rem;">Grafik Performa Tim</h3>
+                            <p style="font-size: 0.85rem; color: var(--text-secondary);">Statistik KDA dan win rate bulan ini</p>
+                        </div>
+                        <span class="badge badge-success">Live</span>
+                    </div>
+
+                    <div class="chart-wrapper">
+
+                        <svg class="chart-svg" viewBox="0 0 600 250">
+
+                            <defs>
+                                <linearGradient id="chart-gradient" x1="0" y1="0" x2="1" y2="0">
+                                    <stop offset="0%" stop-color="var(--primary-color)" />
+                                    <stop offset="100%" stop-color="var(--accent-color)" />
+                                </linearGradient>
+                                <linearGradient id="area-gradient" x1="0" y1="0" x2="0" y2="1">
+                                    <stop offset="0%" stop-color="var(--primary-color)" />
+                                    <stop offset="100%" stop-color="var(--bg-secondary)" stop-opacity="0" />
+                                </linearGradient>
+                            </defs>
+
+                            <line x1="50" y1="50" x2="550" y2="50" stroke="var(--border-color)" stroke-dasharray="4" />
+                            <line x1="50" y1="125" x2="550" y2="125" stroke="var(--border-color)" stroke-dasharray="4" />
+                            <line x1="50" y1="200" x2="550" y2="200" stroke="var(--border-color)" stroke-dasharray="4" />
+
+                            <path class="chart-area" d="M 50 200 L 50 160 L 150 110 L 250 135 L 350 70 L 450 95 L 550 45 L 550 200 Z" />
+
+                            <path class="chart-path" d="M 50 160 L 150 110 L 250 135 L 350 70 L 450 95 L 550 45" />
+
+                            <circle class="chart-point" cx="50" cy="160" r="6" data-value="1,200 MMR" />
+                            <circle class="chart-point" cx="150" cy="110" r="6" data-value="3,400 MMR" />
+                            <circle class="chart-point" cx="250" cy="135" r="6" data-value="2,900 MMR" />
+                            <circle class="chart-point" cx="350" cy="70" r="6" data-value="5,100 MMR" />
+                            <circle class="chart-point" cx="450" cy="95" r="6" data-value="4,800 MMR" />
+                            <circle class="chart-point" cx="550" cy="45" r="6" data-value="7,200 MMR" />
+                        </svg>
+                    </div>
+                </div>
+
+                <div class="glass-card table-card">
+                    <div class="table-header">
+                        <h3 style="font-size: 1.25rem;">Histori Transaksi Turnamen</h3>
+                        <p style="font-size: 0.85rem; color: var(--text-secondary);">Update real-time koin keluar masuk</p>
+                    </div>
+                    <div class="table-wrapper">
+                        <table class="data-table">
+                            <thead>
+                                <tr>
+                                    <th>Player / Tim</th>
+                                    <th>Tanggal</th>
+                                    <th>Koin (USD)</th>
+                                    <th>Status</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <div style="display: flex; align-items: center; gap: 12px;">
+                                            <img src="https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&w=80&q=80" alt="Evos" style="width: 32px; height: 32px; border-radius: 50%;">
+                                            <div>
+                                                <h5 style="font-weight: 600;">Tim Evos</h5>
+                                                <span style="font-size: 0.8rem; color: var(--text-muted);">Biaya Match</span>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>20 Mei 2026</td>
+                                    <td style="font-weight: 600; color: var(--danger-color);">- $1.250,00</td>
+                                    <td><span class="badge badge-success">Done</span></td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div style="display: flex; align-items: center; gap: 12px;">
+                                            <img src="https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&w=80&q=80" alt="Dave" style="width: 32px; height: 32px; border-radius: 50%;">
+                                            <div>
+                                                <h5 style="font-weight: 600;">Dave Miller (Caster)</h5>
+                                                <span style="font-size: 0.8rem; color: var(--text-muted);">Fee Caster</span>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>19 Mei 2026</td>
+                                    <td style="font-weight: 600; color: var(--danger-color);">- $450,00</td>
+                                    <td><span class="badge badge-success">Done</span></td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div style="display: flex; align-items: center; gap: 12px;">
+                                            <img src="https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&w=80&q=80" alt="Prize Pool" style="width: 32px; height: 32px; border-radius: 50%;">
+                                            <div>
+                                                <h5 style="font-weight: 600;">Hadiah Juara 1</h5>
+                                                <span style="font-size: 0.8rem; color: var(--text-muted);">Koin Masuk</span>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>18 Mei 2026</td>
+                                    <td style="font-weight: 600; color: var(--success-color);">+ $2.840,00</td>
+                                    <td><span class="badge badge-success">Done</span></td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div style="display: flex; align-items: center; gap: 12px;">
+                                            <img src="https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&w=80&q=80" alt="Jane" style="width: 32px; height: 32px; border-radius: 50%;">
+                                            <div>
+                                                <h5 style="font-weight: 600;">Beli Skin Set</h5>
+                                                <span style="font-size: 0.8rem; color: var(--text-muted);">Item In-Game</span>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>16 Mei 2026</td>
+                                    <td style="font-weight: 600; color: var(--danger-color);">- $120,00</td>
+                                    <td><span class="badge badge-pending">Pending</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="widgets-column">
+
+                <div class="glass-card widget-card">
+                    <h3>Kirim Koin Cepat</h3>
+                    <p style="font-size: 0.85rem; color: var(--text-secondary); margin-bottom: 20px;">
+                        Masukin nickname penerima sama jumlah koin. Langsung ke-update di saldo kamu dan muncul di histori transaksi!
+                    </p>
+
+                    <form id="quick-transfer-form" class="quick-transfer-form">
+                        <div class="mini-input-group">
+                            <label for="transfer-recipient">Nickname Penerima</label>
+                            <input type="text" id="transfer-recipient" class="mini-input" placeholder="Contoh: NoobMaster69" required>
+                        </div>
+                        <div class="mini-input-group">
+                            <label for="transfer-amount">Jumlah Koin (USD)</label>
+                            <input type="number" id="transfer-amount" class="mini-input" placeholder="150" min="1" step="any" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary" style="padding: 10px; width: 100%; border-radius: var(--radius-sm); font-size: 0.9rem;">
+                            Transfer Sekarang
+                        </button>
+                    </form>
+                </div>
+
+                <div class="glass-card widget-card">
+                    <h3>Log Aktivitas Server</h3>
+                    <div class="notification-list" style="margin-top: 16px;">
+
+                        <div class="notification-item">
+                            <div class="noti-dot"></div>
+                            <div class="noti-text">
+                                <p>Ping server Asia berhasil dicek (Lancar!)</p>
+                                <span>10 menit lalu</span>
+                            </div>
+                        </div>
+
+                        <div class="notification-item">
+                            <div class="noti-dot"></div>
+                            <div class="noti-text">
+                                <p>Koin hadiah turnamen udah masuk</p>
+                                <span>2 jam lalu</span>
+                            </div>
+                        </div>
+
+                        <div class="notification-item">
+                            <div class="noti-dot" style="background-color: var(--warning-color);"></div>
+                            <div class="noti-text">
+                                <p>Ada login dari device baru (PC Warnet)</p>
+                                <span>Kemarin</span>
+                            </div>
+                        </div>
+
+                        <div class="notification-item">
+                            <div class="noti-dot" style="background-color: var(--success-color);"></div>
+                            <div class="noti-text">
+                                <p>Password akun sukses di-update</p>
+                                <span>3 hari lalu</span>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

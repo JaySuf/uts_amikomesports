@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="id" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amikom Esports - Platform Manajemen Tim</title>
+    <meta name="description" content="Platform keren buat ngatur tim esports kamu, pantau analitik real-time, dan transaksi instan yang aman banget.">
+
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="header">
+        <div class="container navbar">
+            <a href="index.html" class="logo">
+                <img src="logo.png" alt="Amikom Esports Logo" style="height: 40px; width: auto; margin-right: 8px;">
+                <span>Amikom<span class="text-gradient">Esports</span></span>
+            </a>
+
+            <nav class="nav-menu">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="about.html" class="nav-link">About Us</a>
+                <a href="contact.html" class="nav-link">Contact Us</a>
+                <a href="dashboard.html" class="nav-link">Dashboard</a>
+                <a href="signin.html" class="nav-link">Login</a>
+                <a href="signup.html" class="nav-link">Daftar</a>
+
+                <div class="nav-actions-mobile" style="display: none;">
+                    <a href="signup.html" class="btn btn-primary" style="width: 100%;">Mulai Main</a>
+                </div>
+            </nav>
+
+            <div class="nav-actions">
+                <button id="theme-toggle" class="theme-toggle-btn" title="Ubah Tema">
+                    <i class="ri-sun-line"></i>
+                </button>
+                <a href="signup.html" class="btn btn-primary">Mulai Main</a>
+            </div>
+
+            <button class="hamburger" aria-label="Alihkan Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <main>
+
+        <section class="hero">
+            <div class="hero-glow"></div>
+            <div class="container hero-grid animate-fade-in-up">
+                <div class="hero-content">
+                    <h1>Bawa Tim <span class="text-gradient">Esports</span> Kamu ke Level Selanjutnya</h1>
+                    <p>Platform kece buat pantau performa tim, atur jadwal match, dan transfer koin turnamen real-time. Didesain khusus buat gamer sejati.</p>
+                    <div class="hero-btns">
+                        <a href="signup.html" class="btn btn-primary">Join Gratis</a>
+                        <a href="dashboard.html" class="btn btn-secondary">Lihat Demo</a>
+                    </div>
+                </div>
+                <div class="hero-mockup">
+                    <div class="hero-card-floating">
+                        <img src="https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&w=800&q=80" alt="Amikom Esports Preview" class="hero-img">
+                        <div class="glass-floating-badge">
+                            <div class="badge-icon">
+                                <i class="ri-sword-line"></i>
+                            </div>
+                            <div class="badge-text">
+                                <h4>Win Rate +34.2%</h4>
+                                <p>Update 2 menit lalu</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="stats-section">
+            <div class="container stats-grid">
+                <div class="glass-card stat-card hover-scale">
+                    <h3 class="text-gradient">50K+</h3>
+                    <p>Pemain Aktif</p>
+                </div>
+                <div class="glass-card stat-card hover-scale">
+                    <h3 class="text-gradient">12K+</h3>
+                    <p>Match Selesai</p>
+                </div>
+                <div class="glass-card stat-card hover-scale">
+                    <h3 class="text-gradient">99.9%</h3>
+                    <p>Server Uptime</p>
+                </div>
+                <div class="glass-card stat-card hover-scale">
+                    <h3 class="text-gradient">24/7</h3>
+                    <p>Support Admin</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="features-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Fitur Keren Buat Tim Kamu</h2>
+                    <p>Semua tools yang kamu butuhin buat nge-track statistik, transfer koin, dan ngatur profil tim yang aman banget di semua device.</p>
+                </div>
+                <div class="features-grid">
+
+                    <div class="glass-card feature-card hover-scale">
+                        <div class="feature-icon">
+                            <i class="ri-shield-keyhole-line"></i>
+                        </div>
+                        <h3>Keamanan Anti-Cheat</h3>
+                        <p>Tenang aja, data tim kamu aman dengan enkripsi tingkat tinggi. Gak ada celah buat hacker masuk ke sistem kita.</p>
+                    </div>
+
+                    <div class="glass-card feature-card hover-scale">
+                        <div class="feature-icon">
+                            <i class="ri-gamepad-line"></i>
+                        </div>
+                        <h3>Dashboard Analitik</h3>
+                        <p>Pantau win rate, grafik KDA, dan saldo turnamen kamu pake widget yang super responsif dan gampang dibaca.</p>
+                    </div>
+
+                    <div class="glass-card feature-card hover-scale">
+                        <div class="feature-icon">
+                            <i class="ri-flashlight-line"></i>
+                        </div>
+                        <h3>Transfer Koin Instan</h3>
+                        <p>Gak pake lama. Kirim koin turnamen atau bayar pendaftaran match langsung masuk dalam hitungan milidetik.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="home-cta-section">
+            <div class="container">
+                <div class="glass-card cta-banner">
+                    <h2 class="text-gradient">Siap Mabar dan Juara?</h2>
+                    <p>Gabung bareng lebih dari 50.000 gamer yang udah pake platform kita. Daftar newsletter buat dapet update turnamen dan tips pro tiap minggunya.</p>
+                    <div class="cta-input-group">
+                        <input type="email" placeholder="Masukin email kamu di sini" aria-label="Email Newsletter">
+                        <button class="btn btn-primary">Gas Langganan!</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-grid">
+            <div class="footer-col">
+                <a href="index.html" class="logo" style="margin-bottom: 20px;">
+                    <img src="logo.png" alt="Amikom Esports Logo" style="height: 40px; width: auto; margin-right: 8px;">
+                    <span>Amikom<span class="text-gradient">Esports</span></span>
+                </a>
+                <p>Amikom Esports ngebantu kamu ngatur tim, mantau statistik, dan gabung turnamen bergengsi dengan gampang dan aman.</p>
+                <div class="footer-socials">
+                    <a href="#" class="social-icon" aria-label="Twitter"><i class="ri-twitter-x-line"></i></a>
+                    <a href="#" class="social-icon" aria-label="LinkedIn"><i class="ri-linkedin-line"></i></a>
+                    <a href="#" class="social-icon" aria-label="Github"><i class="ri-github-line"></i></a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h3>Produk</h3>
+                <ul>
+                    <li><a href="dashboard.html">Demo Dashboard</a></li>
+                    <li><a href="signup.html">Sistem Keamanan</a></li>
+                    <li><a href="index.html">Integrasi API</a></li>
+                    <li><a href="about.html">Daftar Harga</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>Komunitas</h3>
+                <ul>
+                    <li><a href="about.html">Tentang Kita</a></li>
+                    <li><a href="contact.html">Kontak Admin</a></li>
+                    <li><a href="about.html">Gabung Tim</a></li>
+                    <li><a href="contact.html">Lokasi Basecamp</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>Update Mingguan</h3>
+                <p>Langganan newsletter kita buat dapetin info turnamen terbaru dan fitur seru langsung ke email kamu.</p>
+                <form class="newsletter-form" onsubmit="event.preventDefault(); alert('Mantap! Kamu udah sukses langganan newsletter kita!');">
+                    <input type="email" placeholder="email.kamu@domain.com" required aria-label="Email Langganan Newsletter">
+                    <button class="btn btn-primary" type="submit" style="padding: 12px 20px;">
+                        <i class="ri-send-plane-line"></i>
+                    </button>
+                </form>
+            </div>
+        </div>
+        <div class="container footer-bottom">
+            <p>&copy; 2026 Amikom Esports. Dibuat spesial untuk UTS Pemrograman Web. All rights reserved.</p>
+            <div style="display: flex; gap: 24px;">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

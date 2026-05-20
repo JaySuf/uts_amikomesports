@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="id" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontak Kita - Amikom Esports</title>
+    <meta name="description" content="Kirim pesan, tanya seputar turnamen, atau join partner sama tim Amikom Esports lewat channel kontak resmi kita.">
+
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="header">
+        <div class="container navbar">
+            <a href="index.html" class="logo">
+                <img src="logo.png" alt="Amikom Esports Logo" style="height: 40px; width: auto; margin-right: 8px;">
+                <span>Amikom<span class="text-gradient">Esports</span></span>
+            </a>
+
+            <nav class="nav-menu">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="about.html" class="nav-link">About Us</a>
+                <a href="contact.html" class="nav-link active">Contact Us</a>
+                <a href="dashboard.html" class="nav-link">Dashboard</a>
+                <a href="signin.html" class="nav-link">Login</a>
+                <a href="signup.html" class="nav-link">Daftar</a>
+
+                <div class="nav-actions-mobile" style="display: none;">
+                    <a href="signup.html" class="btn btn-primary" style="width: 100%;">Mulai Main</a>
+                </div>
+            </nav>
+
+            <div class="nav-actions">
+                <button id="theme-toggle" class="theme-toggle-btn" title="Ubah Tema">
+                    <i class="ri-sun-line"></i>
+                </button>
+                <a href="signup.html" class="btn btn-primary">Mulai Main</a>
+            </div>
+
+            <button class="hamburger" aria-label="Alihkan Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <main>
+
+        <section class="about-hero animate-fade-in-up" style="padding: 100px 0 40px 0;">
+            <div class="container">
+                <h1 class="text-gradient">Drop Pesan Buat Kita</h1>
+                <p style="max-width: 600px; margin: 0 auto; color: var(--text-secondary); font-size: 1.1rem;">
+                    Ada pertanyaan soal keamanan akun, jadwal turnamen, atau pengen join partner? Santai aja, tim kita siap ngerespon.
+                </p>
+            </div>
+        </section>
+
+        <section class="contact-section">
+            <div class="container contact-grid">
+
+                <div class="contact-info-column animate-fade-in-up">
+
+                    <div class="glass-card contact-info-card hover-scale">
+                        <div class="contact-info-icon">
+                            <i class="ri-mail-send-line"></i>
+                        </div>
+                        <div class="contact-info-details">
+                            <h4>Email Admin</h4>
+                            <p>admin@amikomesports.com</p>
+                            <p style="font-size: 0.85rem; color: var(--text-muted);">Dibalas dalam waktu maksimal 2 jam</p>
+                        </div>
+                    </div>
+
+                    <div class="glass-card contact-info-card hover-scale">
+                        <div class="contact-info-icon">
+                            <i class="ri-phone-line"></i>
+                        </div>
+                        <div class="contact-info-details">
+                            <h4>Hotline Bantuan</h4>
+                            <p>+62 (812) 3456-7890</p>
+                            <p style="font-size: 0.85rem; color: var(--text-muted);">Sen-Jum: 09:00 - 18:00 WIB</p>
+                        </div>
+                    </div>
+
+                    <div class="glass-card contact-info-card hover-scale">
+                        <div class="contact-info-icon">
+                            <i class="ri-map-pin-2-line"></i>
+                        </div>
+                        <div class="contact-info-details">
+                            <h4>Basecamp Utama</h4>
+                            <p>Jalan Ring Road Utara, Condong Catur</p>
+                            <p style="font-size: 0.85rem; color: var(--text-muted);">Yogyakarta, Indonesia 55281</p>
+                        </div>
+                    </div>
+
+                    <div class="glass-card map-card">
+                        <div class="map-placeholder">
+                            <i class="ri-global-line"></i>
+                            <h4 style="font-weight: 600; color: var(--text-primary);">Peta Interaktif Basecamp Amikom Esports</h4>
+                            <p style="font-size: 0.85rem; text-align: center; max-width: 250px; line-height: 1.4;">
+                                Vektor lokasi yang ditracking pake GPS biar kamu gampang main ke basecamp.
+                            </p>
+                            <div style="display: flex; gap: 8px; margin-top: 10px;">
+                                <span class="badge badge-success" style="padding: 2px 8px; font-size: 0.75rem;">GPS Aktif</span>
+                                <span class="badge badge-success" style="padding: 2px 8px; font-size: 0.75rem; background: rgba(124, 58, 237, 0.15); color: var(--primary-color);">Server Aman</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="glass-card contact-form-card animate-fade-in-up">
+                    <h2>Kirim Pesan Aman</h2>
+                    <p>Isi form di bawah ini. Tenang, chat kamu dienkripsi kok, privasi dijamin aman banget.</p>
+
+                    <div id="form-feedback" class="form-feedback"></div>
+
+                    <form id="contact-form" class="auth-form">
+
+                        <div class="form-group">
+                            <label for="contact-name">Nama Lengkap / IGN</label>
+                            <div class="input-wrapper">
+                                <i class="ri-user-line"></i>
+                                <input type="text" id="contact-name" class="form-input" placeholder="Nama In-Game kamu" required>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="contact-email">Alamat Email</label>
+                            <div class="input-wrapper">
+                                <i class="ri-mail-line"></i>
+                                <input type="email" id="contact-email" class="form-input" placeholder="email.kamu@domain.com" required>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="contact-subject">Tujuan Pesan</label>
+                            <div class="input-wrapper">
+                                <i class="ri-questionnaire-line" style="position: absolute; left: 16px; top: 50%; transform: translateY(-50%); color: var(--text-muted);"></i>
+                                <select id="contact-subject" class="form-input" style="appearance: none; cursor: pointer; padding-right: 40px;">
+                                    <option value="general">Tanya-tanya Umum</option>
+                                    <option value="billing">Masalah Saldo & Koin</option>
+                                    <option value="security">Lapor Hacker / Cheat</option>
+                                    <option value="developer">Join Tim / Partnership</option>
+                                </select>
+                                <i class="ri-arrow-down-s-line" style="position: absolute; right: 16px; left: auto; top: 50%; transform: translateY(-50%); pointer-events: none; color: var(--text-muted);"></i>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="contact-message">Pesan Kamu</label>
+                            <textarea id="contact-message" class="form-input" rows="5" placeholder="Tulisin aja langsung di sini, mau curhat soal turnamen juga boleh..." style="padding-left: 16px; resize: none;" required></textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 12px; gap: 8px;">
+                            <i class="ri-send-plane-fill"></i>
+                            Gas Kirim Pesan!
+                        </button>
+                    </form>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-grid">
+            <div class="footer-col">
+                <a href="index.html" class="logo" style="margin-bottom: 20px;">
+                    <img src="logo.png" alt="Amikom Esports Logo" style="height: 40px; width: auto; margin-right: 8px;">
+                    <span>Amikom<span class="text-gradient">Esports</span></span>
+                </a>
+                <p>Amikom Esports ngebantu kamu ngatur tim, mantau statistik, dan gabung turnamen bergengsi dengan gampang dan aman.</p>
+                <div class="footer-socials">
+                    <a href="#" class="social-icon" aria-label="Twitter"><i class="ri-twitter-x-line"></i></a>
+                    <a href="#" class="social-icon" aria-label="LinkedIn"><i class="ri-linkedin-line"></i></a>
+                    <a href="#" class="social-icon" aria-label="Github"><i class="ri-github-line"></i></a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h3>Produk</h3>
+                <ul>
+                    <li><a href="dashboard.html">Demo Dashboard</a></li>
+                    <li><a href="signup.html">Sistem Keamanan</a></li>
+                    <li><a href="index.html">Integrasi API</a></li>
+                    <li><a href="about.html">Daftar Harga</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>Komunitas</h3>
+                <ul>
+                    <li><a href="about.html">Tentang Kita</a></li>
+                    <li><a href="contact.html">Kontak Admin</a></li>
+                    <li><a href="about.html">Gabung Tim</a></li>
+                    <li><a href="contact.html">Lokasi Basecamp</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>Update Mingguan</h3>
+                <p>Langganan newsletter kita buat dapetin info turnamen terbaru dan fitur seru langsung ke email kamu.</p>
+                <form class="newsletter-form" onsubmit="event.preventDefault(); alert('Mantap! Kamu udah sukses langganan newsletter kita!');">
+                    <input type="email" placeholder="email.kamu@domain.com" required aria-label="Email Langganan Newsletter">
+                    <button class="btn btn-primary" type="submit" style="padding: 12px 20px;">
+                        <i class="ri-send-plane-line"></i>
+                    </button>
+                </form>
+            </div>
+        </div>
+        <div class="container footer-bottom">
+            <p>&copy; 2026 Amikom Esports. Dibuat spesial untuk UTS Pemrograman Web. All rights reserved.</p>
+            <div style="display: flex; gap: 24px;">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

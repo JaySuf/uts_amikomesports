@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="id" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daftar - Amikom Esports</title>
+    <meta name="description" content="Bikin akun baru di Amikom Esports buat dapetin fitur analitik tim dan ikutan turnamen seru.">
+
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="header">
+        <div class="container navbar">
+            <a href="index.html" class="logo">
+                <img src="logo.png" alt="Amikom Esports Logo" style="height: 40px; width: auto; margin-right: 8px;">
+                <span>Amikom<span class="text-gradient">Esports</span></span>
+            </a>
+
+            <nav class="nav-menu">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="about.html" class="nav-link">About Us</a>
+                <a href="contact.html" class="nav-link">Contact Us</a>
+                <a href="dashboard.html" class="nav-link">Dashboard</a>
+                <a href="signin.html" class="nav-link">Login</a>
+                <a href="signup.html" class="nav-link active">Daftar</a>
+
+                <div class="nav-actions-mobile" style="display: none;">
+                    <a href="signup.html" class="btn btn-primary" style="width: 100%;">Mulai Main</a>
+                </div>
+            </nav>
+
+            <div class="nav-actions">
+                <button id="theme-toggle" class="theme-toggle-btn" title="Ubah Tema">
+                    <i class="ri-sun-line"></i>
+                </button>
+                <a href="signup.html" class="btn btn-primary">Mulai Main</a>
+            </div>
+
+            <button class="hamburger" aria-label="Alihkan Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <main class="auth-page">
+        <div class="auth-glow-1"></div>
+        <div class="auth-glow-2"></div>
+
+        <div class="glass-card auth-card animate-fade-in-up" style="max-width: 520px;">
+            <div class="auth-header">
+                <h1>Bikin Akun Baru</h1>
+                <p>Join komunitas esports kita dan nikmatin dashboard tim yang kece badai.</p>
+            </div>
+
+            <form class="auth-form" onsubmit="event.preventDefault(); window.location.href='dashboard.html';">
+
+                <div class="form-group">
+                    <label for="signup-name">Nama / IGN (In-Game Name)</label>
+                    <div class="input-wrapper">
+                        <i class="ri-user-line"></i>
+                        <input type="text" id="signup-name" class="form-input" placeholder="Nickname keren kamu" required autocomplete="name">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="signup-email">Alamat Email</label>
+                    <div class="input-wrapper">
+                        <i class="ri-mail-line"></i>
+                        <input type="email" id="signup-email" class="form-input" placeholder="email.kamu@domain.com" required autocomplete="email">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="signup-password">Pilih Password</label>
+                    <div class="input-wrapper">
+                        <i class="ri-lock-line"></i>
+                        <input type="password" id="signup-password" class="form-input" placeholder="â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢" required autocomplete="new-password">
+                    </div>
+
+                    <div class="password-strength-container">
+                        <div class="password-strength-bar">
+                            <div class="password-strength-fill"></div>
+                        </div>
+                        <div class="password-strength-text">Kosong</div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="signup-confirm">Ulangi Password</label>
+                    <div class="input-wrapper">
+                        <i class="ri-lock-check-line"></i>
+                        <input type="password" id="signup-confirm" class="form-input" placeholder="â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢" required autocomplete="new-password">
+                    </div>
+                </div>
+
+                <div class="form-options">
+                    <label class="checkbox-label" style="align-items: flex-start;">
+                        <input type="checkbox" id="signup-terms" required style="margin-top: 3px;">
+                        <span>Gue setuju sama <a href="#" class="auth-link">Aturan Main</a> dan <a href="#" class="auth-link">Kebijakan Privasi</a> platform ini.</span>
+                    </label>
+                </div>
+
+                <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 8px;">
+                    Daftar Sekarang
+                </button>
+            </form>
+
+            <div class="auth-divider">atau join cepet via</div>
+
+            <div class="social-auth-grid">
+                <button class="btn-social" onclick="window.location.href='dashboard.html';" title="Daftar via Google">
+                    <i class="ri-google-fill" style="color: #EA4335;"></i>
+                </button>
+                <button class="btn-social" onclick="window.location.href='dashboard.html';" title="Daftar via GitHub">
+                    <i class="ri-github-fill"></i>
+                </button>
+                <button class="btn-social" onclick="window.location.href='dashboard.html';" title="Daftar via Apple">
+                    <i class="ri-apple-fill"></i>
+                </button>
+            </div>
+
+            <p style="text-align: center; margin-top: 32px; color: var(--text-secondary); font-size: 0.9rem;">
+                Udah punya akun? <a href="signin.html" class="auth-link">Login sini aja</a>
+            </p>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
